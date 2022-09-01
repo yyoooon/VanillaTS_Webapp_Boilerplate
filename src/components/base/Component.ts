@@ -2,9 +2,9 @@
 export default class Component<P, S> {
   $node?: Element;
   $target: Element;
-  props: P;
+  props?: P;
   state: S | undefined;
-  constructor($target: Element, props: P) {
+  constructor({$target, props}: {$target: Element, props?: P}) {
     this.$target = $target;
     this.props = props;
     this.setup();
